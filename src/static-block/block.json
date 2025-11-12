@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/static-block",
+	"version": "0.1.0",
+	"title": "Static Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"attributes": {
+		"videoUrl": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "video",
+			"attribute": "src"
+		}
+	},
+	"supports": {
+		"html": false,
+		"interactivity": true
+	},
+	"textdomain": "meetup-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js"
+}

@@ -1,0 +1,102 @@
+// 🎨 Variables base
+$card-bg: #fff;
+$card-radius: 1rem;
+$card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+$card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
+$text-color: #444;
+$title-color: #222;
+$muted-color: #777;
+$accent-color: #fbbc04; // amarillo Google
+
+// 🧱 Layout principal
+.meetup-google-reviews {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 2rem 0;
+	}
+
+	&__item {
+		background-color: $card-bg;
+		border-radius: $card-radius;
+		box-shadow: $card-shadow;
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: $card-shadow-hover;
+		}
+	}
+
+	// Imagen del autor (si existe)
+	&__image {
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		object-fit: cover;
+		margin-bottom: 0.75rem;
+	}
+
+	// Cabecera con autor, rating y fecha
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 0.75rem;
+		gap: 0.25rem;
+	}
+
+	&__author {
+		font-weight: 600;
+		font-size: 1rem;
+		color: #333;
+	}
+
+	&__rating {
+		color: $accent-color;
+		font-weight: 600;
+	}
+
+	&__date {
+		font-size: 0.875rem;
+		color: $muted-color;
+	}
+
+	// Texto del comentario
+	&__text {
+		font-size: 0.95rem;
+		line-height: 1.5;
+		color: $text-color;
+		margin: 0.5rem 0 0;
+	}
+
+	//  Estrellas visuales
+	&__stars {
+		display: inline-flex;
+		gap: 2px;
+
+		&__star {
+			color: $accent-color;
+			font-size: 1rem;
+
+			&--empty {
+				color: #ddd;
+			}
+		}
+	}
+
+	// Título general
+	&__title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: $title-color;
+		text-align: center;
+	}
+}
